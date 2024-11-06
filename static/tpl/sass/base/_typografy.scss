@@ -1,0 +1,90 @@
+h1, .title-1 {
+    color: $brown;
+    font: 400 28px/33px Cambria, sans-serif;
+    margin-bottom: 40px;
+}
+h2, .title-2 {
+    color: $brown;
+    font: 400 24px/28px Cambria, sans-serif;
+    margin-bottom: 30px;
+}
+h3, .title-3 {
+    color: $brown;
+    font: 400 20px/23px Cambria, sans-serif;
+    margin-bottom: 20px;
+}
+h4, .title-4 {
+    color: $brown;
+    font: 400 18px/21px Cambria, sans-serif;
+    margin-bottom: 20px;
+}
+h5, .title-5 {
+    color: $brown;
+    font: 400 16px/19px Cambria, sans-serif;
+    margin-bottom: 20px;
+}
+h6, .title-6 {
+    color: $brown;
+    font: 400 14px/16px Cambria, sans-serif;
+    margin-bottom: 20px;
+}
+@media all and (min-width: 768px) {
+    h1, .title-1 {
+        font-size: 36px;
+        line-height: 42px;
+        margin-bottom: 50px;
+    }
+    h2, .title-2 {
+        font-size: 28px;
+        line-height: 33px;
+        margin-bottom: 40px;
+    }
+    h3, .title-3 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    h4, .title-4 {
+        font-size: 20px;
+        line-height: 23px;
+    }
+    h5, .title-5 {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    h6, .title-6 {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+@media all and (min-width: 1200px) {
+    h1, .title-1 {
+        font-size: 48px;
+        line-height: 56px;
+        margin-bottom: 70px;
+    }
+    h2, .title-2 {
+        font-size: 40px;
+        line-height: 47px;
+        margin-bottom: 30px;
+    }
+    h3, .title-3 {
+        font-size: 36px;
+        line-height: 42px;
+        margin-bottom: 30px;
+    }
+    h4, .title-4 {
+        font-size: 28px;
+        line-height: 33px;
+        margin-bottom: 30px;
+    }
+    h5, .title-5 {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 30px;
+    }
+    h6, .title-6 {
+        font-size: 20px;
+        line-height: 23px;
+        margin-bottom: 30px;
+    }
+}

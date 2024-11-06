@@ -1,0 +1,30 @@
+@font-face {
+    font-family: ProximaNova;
+    src: local('Proxima Nova Regular'), local('Proxima-Nova-Regular'),
+    url('/tpl/fonts/ProximaNova-Regular.woff2') format('woff2'),
+    url('/tpl/fonts/ProximaNova-Regular.woff') format('woff'),
+    url('/tpl/fonts/ProximaNova-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: ProximaNova;
+    src: local('Proxima Nova Semibold'), local('Proxima-Nova-Semibold'),
+    url('/tpl/fonts/ProximaNova-Semibold.woff2') format('woff2'),
+    url('/tpl/fonts/ProximaNova-Semibold.woff') format('woff'),
+    url('/tpl/fonts/ProximaNova-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: Cambria;
+    src: local('Cambria Regular'), local('Cambria-Regular'),
+    url('/tpl/fonts/Cambria.woff2') format('woff2'),
+    url('/tpl/fonts/Cambria.woff') format('woff'),
+    url('/tpl/fonts/Cambria.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}

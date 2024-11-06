@@ -1,0 +1,61 @@
+.aside {
+    position: sticky;
+    width: 240px;
+    top: 150px;
+    right: 0;
+    border-left: 1px solid #998675;
+    padding-left: 40px;
+    z-index: 100;
+    &__list {
+        color: $light;
+        li {
+            + li {
+                margin-top:15px;
+            }
+        }
+        a {
+            font-size: 14px;
+            line-height: 17px;
+            border-bottom: 1px solid transparent;
+            &.active, &:hover {
+                color: #65473c;
+                border-bottom-color: currentColor;
+            }
+            &.active {
+                position: relative;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 18px;
+                    height: 6px;
+                    left: -40px;
+                    top: 50%;
+                    margin-top: -3px;
+                    background: #998675;
+                }
+            }
+        }
+    }
+}
+@media all and (max-width: 1024px) {
+    aside {
+        display: none;
+    }
+}
+@media all and (min-width: 1366px) {
+    .aside {
+        width: 270px;
+        padding-left: 49px;
+        &__list {
+            a {
+                font-size: 16px;
+                line-height: 19px;
+                &.active {
+                    &:before {
+                        left: -50px;
+                    }
+                }
+            }
+        }
+    }
+}

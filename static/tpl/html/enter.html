@@ -1,0 +1,45 @@
+<!--#include file="includes/_header.html" -->
+<div class="wrapper">
+    <!--#include file="includes/_navigation.html" -->
+    <div class="wrapper__content wrapper__content_page">
+        <ul class="breadcrumbs">
+            <li>
+                <a href="">Главная</a>
+                <span>/</span>
+            </li>
+            <li>
+                <a href="">Промежуточная страница</a>
+                <span>/</span>
+            </li>
+            <li>Текущая страница</li>
+        </ul>
+        <h1 class="title-1">Вход</h1>
+        <form class="form">
+            <label class="form-label">
+                <span class="form-label__name">Введите логин</span>
+                <input class="form-label__field" type="text" name="">
+            </label>
+            <label class="form-label">
+                <span class="form-label__name">Введите пароль</span>
+                <input class="form-label__field" type="password" name="">
+            </label>
+            <div class="form__actions">
+                <label class="form-remember">
+                    <input type="checkbox">
+                    <i>
+                        <svg class="check">
+                            <use xlink:href="/tpl/images/svg-symbols.svg#check"></use>
+                        </svg>
+                    </i>
+                    <span>Запомнить меня</span>
+                </label>
+                <a class="form-forget line-link" href="">Забыли свой пароль?</a>
+            </div>
+            <div class="form__btns">
+                <button class="fill-btn fill-btn_brown" type="submit">Вход</button>
+                <a class="border-btn border-btn_brown" href="">Регистрация</a>
+            </div>
+        </form>
+    </div>
+</div>
+<!--#include virtual="includes/_footer.html"-->

@@ -1,0 +1,196 @@
+.hero-distance {
+    position: relative;
+    font-size: 16px;
+    line-height: 19px;
+    padding-top: 70px;
+    margin-bottom: 70px;
+    overflow: hidden;
+    z-index: 100;
+    &__wrap {
+        @extend %container;
+    }
+    &__logo {
+        position: absolute;
+        display: block;
+        width: 318px;
+        height: auto;
+        top: 0;
+        right: -75px;
+        z-index: -1;
+    }
+    &__title {
+        text-align: center;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    &-links {
+        margin-bottom: 30px;
+        li {
+            + li {
+                margin-top: 25px;
+            }
+        }
+        a {
+            position: relative;
+            display: block;
+            padding-left: 50px;
+            .no-touch &:hover {
+                span {
+                    border-bottom-color: transparent;
+                }
+            }
+        }
+        span {
+            border-bottom: 1px solid currentColor;
+            @extend %tr;
+        }
+        svg {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -6px;
+        }
+    }
+    &-info {
+        &__title {
+            margin-bottom: 25px;
+        }
+        &__text {
+            max-width: 360px;
+            margin-bottom: 20px;
+        }
+        &__list {
+            li {
+                + li {
+                    margin-top: 20px;
+                }
+            }
+            a {
+                @extend %flex-sc;
+            }
+            svg {
+                width: 22px;
+                margin-right: 15px;
+            }
+            i {
+                display: block;
+                color: #8d8888;
+                font-size: 12px;
+                font-style: normal;
+                line-height: 15px;
+            }
+        }
+    }
+}
+@media all and (max-width: 1024px) {
+    .hero-distance {
+        &-info {
+            &__title {
+                display: none;
+            }
+        }
+    }
+}
+@media all and (min-width: 768px) and (max-width: 1025px) {
+    .hero-distance {
+        &-links {
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            li {
+                width: 50%;
+                padding-right: 30px;
+                &:nth-child(2) {
+                    margin-top: 0;
+                }
+            }
+        }
+        &-info {
+            &__list {
+                column-count: 2;
+                li {
+                    page-break-inside: avoid;
+                    break-inside: avoid;
+                    white-space: nowrap;
+                    &:nth-child(4) {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+@media all and (min-width: 768px) {
+    .hero-distance {
+        font-size: 18px;
+        line-height: 22px;
+        padding-top: 90px;
+        margin-bottom: 90px;
+        &__logo {
+            width: 547px;
+            right: -46px;
+        }
+        &-links {
+            margin-bottom: 60px;
+            li {
+                + li {
+                    margin-top: 30px;
+                }
+            }
+            svg {
+                width: 21px;
+                height: 14px;
+            }
+        }
+        &-info {
+            &__text {
+                margin-bottom: 30px;
+            }
+            &__list {
+                li {
+                    + li {
+                        margin-top: 30px;
+                    }
+                }
+                i {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+@media all and (min-width: 1025px) {
+    .hero-distance {
+        font-size: 22px;
+        line-height: 27px;
+        padding-top: 150px;
+        margin-bottom: 150px;
+        &__wrap {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        &__logo {
+            width: 823px;
+            top: 80px;
+            right: -184px;
+        }
+        &__title {
+            display: none;
+        }
+        &-info {
+            width: 50%;
+            &__text {
+                margin-bottom: 35px;
+            }
+        }
+        &-links {
+            width: 50%;
+            margin-bottom: 0;
+            li {
+                + li {
+                    margin-top: 27px;
+                }
+            }
+        }
+    }
+}

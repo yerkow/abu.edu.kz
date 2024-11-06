@@ -1,0 +1,145 @@
+.hidden {
+    display: none !important;
+}
+.disabled {
+    opacity: 0.6;
+    cursor: auto;
+    pointer-events: none;
+}
+.text-center {
+    text-align: center;
+}
+.list-arrow {
+    li {
+        font-size: 16px;
+        line-height: 19px;
+        list-style: none !important;
+        + li {
+            margin-top: 25px;
+        }
+        a {
+            position: relative;
+            display: block;
+            padding-left: 50px;
+            .no-touch &:hover {
+                span {
+                    border-bottom-color: transparent;
+                }
+            }
+        }
+        span {
+            border-bottom: 1px solid currentColor;
+            @extend %tr;
+        }
+        svg {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -6px;
+        }
+    }
+    @media all and (min-width: 768px) {
+        li {
+            font-size: 18px;
+            line-height: 22px;
+        }
+        svg {
+            width: 22px;
+            height: 14px;
+            margin-top: -7px;
+        }
+    }
+    @media all and (min-width: 1200px) {
+        li {
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+}
+.list-docs {
+    &_short {
+        @extend %flex-sc;
+        max-width: 250px;
+        flex-wrap: wrap;
+        li {
+            width: 50%;
+            &:nth-child(2) {
+                margin-top: 0;
+            }
+        }
+    }
+    li {
+        color: $brown;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 15px;
+        list-style: none !important;
+        + li {
+            margin-top: 14px;
+        }
+    }
+    a {
+        position: relative;
+        display: block;
+        padding-left: 30px;
+        &:hover {
+            span {
+                border-bottom-color: transparent;
+            }
+        }
+    }
+    span {
+        border-bottom: 1px solid currentColor;
+        @extend %tr;
+    }
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-right: 15px;
+    }
+    @media all and (min-width: 768px) {
+        li {
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+    @media all and (min-width: 1200px) {
+        li {
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+}
+.list-icons {
+    margin-left: 0 !important;
+    li {
+        position: relative;
+        list-style: none !important;
+        padding-left: 30px;
+        + li {
+            margin-top: 10px;
+        }
+    }
+    svg {
+        position: absolute;
+        top: 3px;
+        left: 0;
+        margin-right: 15px;
+    }
+}
+.modal-window {
+    position: relative;
+    max-width: 600px;
+    color: #fff;
+    padding: 40px 20px;
+    margin: 0 auto;
+    background-color: $brown;
+    &__title {
+        color: #fff;
+    }
+    &__desc {
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+}

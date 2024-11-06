@@ -1,0 +1,193 @@
+.reviews {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background: #3d3d3d url('/tpl/images/reviews-bg.png') center / cover no-repeat;
+    border-bottom: 1px solid #fff;
+    &__wrap {
+        @extend %container;
+    }
+    &__block {
+        position: relative;
+    }
+    &__title {
+        color: #fff;
+    }
+    &-people {
+        width: 240px;
+        margin: 0 auto;
+    }
+    &-person {
+        @extend %img;
+    }
+    &-slider {
+        position: relative;
+        max-width: 630px;
+        margin: 0 auto;
+        padding: 54px 33px 30px;
+        background-color: #fff;
+        &__quotes {
+            position: absolute;
+            top: 30px;
+            left: 33px;
+        }
+        &__prev, &__next {
+            position: absolute;
+            @extend %flex-cc;
+            width: 34px;
+            height: 34px;
+            top: 50%;
+            color: #fff;
+            font-size: 0;
+            line-height: 0;
+            margin-top: -17px;
+            background: #c4c4c4;
+            border-radius: 100%;
+            cursor: pointer;
+            @extend %tr;
+            .no-touch &:hover {
+                background-color: $burgundy;
+            }
+        }
+        &__prev {
+            left: -5px;
+        }
+        &__next {
+            right: -5px;
+        }
+    }
+    &-item {
+        text-align: center;
+        &__name {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 20px;
+        }
+        &__desc {
+            font-size: 14px;
+            line-height: 17px;
+            margin-bottom: 20px;
+        }
+        &__job {
+            color: #c4c4c4;
+            line-height: 15px;
+        }
+    }
+}
+@media all and (max-width: 1024px) {
+    .reviews {
+        &__title {
+            text-align: center;
+        }
+    }
+}
+@media all and (min-width: 768px) {
+    .reviews {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+}
+@media all and (min-width: 1025px) {
+    .reviews {
+        &-people {
+            width: 440px;
+            margin-right: 0;
+        }
+        &-slider {
+            position: absolute;
+            top: 50%;
+            left: 40px;
+            transform: translateY(-50%);
+            padding: 70px 120px 50px;
+            margin: 0;
+            z-index: 100;
+            &__prev, &__next {
+                width: 50px;
+                height: 50px;
+                margin-top: -25px;
+                svg {
+                    width: 22px;
+                    height: 18px;
+                }
+            }
+            &__prev {
+                left: 30px;
+            }
+            &__next {
+                right: 30px;
+            }
+        }
+        &-item {
+            &__desc {
+                font-size: 18px;
+                line-height: 22px;
+            }
+            &__job {
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+    }
+}
+@media all and (min-width: 1200px) {
+    .reviews {
+        padding-top: 150px;
+        padding-bottom: 150px;
+        &-slider {
+            top: auto;
+            bottom: 40px;
+            left: 30px;
+            transform: translateY(0);
+            padding: 90px 195px 50px 50px;
+            &__quotes {
+                top: 50px;
+                left: 50px;
+            }
+            &__prev, &__next {
+                width: 36px;
+                height: 36px;
+                top: auto;
+                bottom: 55px;
+                margin-top: 0;
+                svg {
+                    width: 16px;
+                    height: 13px;
+                }
+            }
+            &__prev {
+                left: auto;
+                right: 105px;
+            }
+            &__next {
+                right: 50px;
+            }
+        }
+        &-item {
+            text-align: left;
+            &__desc {
+                font-size: 20px;
+                line-height: 24px;
+            }
+            &__job {
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+    }
+}
+@media all and (min-width: 1400px) {
+    .reviews {
+        &__title {
+            margin-bottom: -55px;
+        }
+        &-people {
+            width: 632px;
+            .swiper-slide {
+                width: 450px;
+            }
+            .swiper-slide-active {
+                transform: none !important;
+            }
+        }
+    }
+}

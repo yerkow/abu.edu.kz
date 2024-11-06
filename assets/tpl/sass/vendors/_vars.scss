@@ -1,0 +1,89 @@
+%container {
+    width: 100%;
+    max-width: 1305px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    @media all and (min-width: 768px) {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    @media all and (min-width: 1600px) {
+        max-width: none;
+        padding-left: 145px;
+        padding-right: 145px;
+    }
+}
+%dib {
+    display: inline-block;
+    vertical-align: middle;
+}
+%img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+%bg {
+    background-size: cover;
+    background-position: center center;
+}
+%tr {
+    transition: 200ms;
+}
+%psevdo {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+%hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+%visible {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+%pagination {
+    width: 100%;
+    font-size: 0;
+    text-align: center;
+    z-index: 100;
+    span {
+        @extend %dib;
+        width: 13px;
+        height: 13px;
+        background-color: $brown;
+        border-radius: 100%;
+        cursor: pointer;
+        @extend %tr;
+        &:hover, &.active {
+            background-color: $dark;
+        }
+        + span {
+            margin-left: 10px;
+        }
+    }
+    @media all and (min-width: 768px) {
+        span {
+            width: 14px;
+            height: 14px;
+            + span {
+                margin-left: 20px;
+            }
+        }
+    }
+    @media all and (min-width: 768px) {
+        span {
+            width: 16px;
+            height: 16px;
+            + span {
+                margin-left: 22px;
+            }
+        }
+    }
+}

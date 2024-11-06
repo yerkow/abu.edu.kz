@@ -1,0 +1,36 @@
+.line-link {
+    border-bottom: 1px solid currentColor;
+    &:hover {
+        border-bottom-color: transparent;
+    }
+}
+.link-arrow {
+    color: $burgundy;
+    font-size: 14px;
+    font-weight: 600;
+    svg {
+        @extend %dib;
+        margin-left: 5px;
+        @extend %tr;
+    }
+    span {
+        border-bottom-color: transparent;
+        @extend %tr;
+    }
+    .no-touch &:hover {
+        span {
+            border-bottom: 1px solid currentColor;
+        }
+        svg {
+            transform: translateX(5px);
+        }
+    }
+    @media all and (min-width: 768px) {
+        font-size: 16px;
+        svg {
+            width: 21px;
+            height: 14px;
+            margin-left: 12px;
+        }
+    }
+}

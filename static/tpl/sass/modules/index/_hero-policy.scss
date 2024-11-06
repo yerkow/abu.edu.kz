@@ -1,0 +1,92 @@
+.hero-policy {
+    padding: 70px 0;
+    background: rgba(196, 196, 196, 0.3);
+    &__wrap {
+        @extend %container;
+    }
+    &-item {
+        &__icon {
+            margin-bottom: 15px;
+        }
+        &__name {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            margin-bottom: 10px;
+        }
+        &__desc {
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+}
+@media all and (max-width: 1024px) {
+    .hero-policy {
+        &__title {
+            text-align: center;
+        }
+    }
+}
+@media all and (max-width: 767px) {
+    .hero-policy {
+        text-align: center;
+        &-item {
+            + .hero-policy-item {
+                margin-top: 30px;
+                padding-top: 30px;
+                border-top: 1px solid $brown;
+            }
+        }
+    }
+}
+@media all and (min-width: 768px) {
+    .hero-policy {
+        padding-top: 90px;
+        padding-bottom: 90px;
+        &__block {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+        }
+        &-item {
+            flex: 1;
+            + .hero-policy-item {
+                margin-left: 23px;
+                padding-left: 23px;
+                border-left: 1px solid $brown;
+            }
+            &__icon {
+                height: 70px;
+                margin-bottom: 20px;
+            }
+            &__name {
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+@media all and (min-width: 1025px) {
+    .hero-policy {
+        padding-top: 150px;
+        padding-bottom: 150px;
+        &-item {
+            + .hero-policy-item {
+                margin-left: 41px;
+                padding-left: 41px;
+            }
+            &__icon {
+                margin-bottom: 25px;
+            }
+            &__name {
+                font-size: 24px;
+                line-height: 29px;
+                margin-bottom: 10px;
+            }
+            &__desc {
+                line-height: 22px;
+            }
+        }
+    }
+}

@@ -1,0 +1,237 @@
+%btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    vertical-align: top;
+    text-align: center;
+    cursor: pointer;
+    @extend %tr;
+}
+.fill-btn {
+    @extend %btn;
+    height: 37px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 1px 27px 0;
+    border: 2px solid;
+    .no-touch &:hover {
+        background-color: #fff;
+    }
+    &_brown {
+        border-color: $brown;
+        background-color: $brown;
+        .no-touch &:hover {
+            color: $brown;
+        }
+    }
+    &_light {
+        border-color: $light;
+        background-color: $brown;
+        .no-touch &:hover {
+            color: $light;
+        }
+    }
+    &_burgundy {
+        border-color: $burgundy;
+        background-color: $burgundy;
+        .no-touch &:hover {
+            color: $burgundy;
+        }
+    }
+    &_gray {
+        border-color: #c4c4c4;
+        background-color: #c4c4c4;
+        .no-touch &:hover {
+            color: #c4c4c4;
+        }
+    }
+    &_white {
+        color: $brown;
+        border-color: #fff;
+        background-color: #fff;
+        .no-touch &:hover {
+            border-color: #c4c4c4;
+            background-color: #c4c4c4;
+        }
+    }
+    .touch {
+        padding-top: 2px;
+    }
+    svg {
+        margin-left: 10px;
+    }
+    @media all and (min-width: 1200px) {
+        height: 43px;
+        font-size: 18px;
+        padding: 1px 30px 0;
+    }
+}
+.border-btn {
+    @extend %btn;
+    height: 37px;
+    color: $brown;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 1px 27px 0;
+    border: 2px solid;
+    &_brown {
+        border-color: $brown;
+        .no-touch &:hover {
+            background-color: $brown;
+        }
+    }
+    &_light {
+        border-color: $light;
+        .no-touch &:hover {
+            background-color: $light;
+        }
+    }
+    &_burgundy {
+        border-color: $burgundy;
+        .no-touch &:hover {
+            background-color: $burgundy;
+        }
+    }
+    &_gray {
+        border-color: #c4c4c4;
+        .no-touch &:hover {
+            background-color: #c4c4c4;
+        }
+    }
+    .no-touch &:hover {
+        color: #fff;
+    }
+    .touch & {
+        padding-top: 2px;
+    }
+    svg {
+        margin-left: 10px;
+    }
+    @media all and (min-width: 1200px) {
+        height: 43px;
+        font-size: 18px;
+        padding: 1px 30px 0;
+    }
+}
+.white-btn {
+    @extend %btn;
+    height: 37px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 1px 27px 0;
+    border: 2px solid #ffffff;
+    .no-touch &:hover {
+        color: $brown;
+        background-color: #fff;
+    }
+    .touch & {
+        padding-top: 2px;
+    }
+    @media all and (min-width: 1200px) {
+        height: 43px;
+        font-size: 18px;
+        padding: 1px 30px 0;
+    }
+}
+.arrow-btn {
+    @extend %btn;
+    height: 37px;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 1px 27px 0;
+    border: 2px solid;
+    svg {
+        margin-left: 15px;
+    }
+    &_burgundy {
+        color: $burgundy;
+        border-color: $burgundy;
+        .no-touch &:hover {
+            color: #fff;
+            background-color: $burgundy;
+        }
+    }
+    &_brown {
+        color: #fff;
+        border-color: $light;
+        background-color: $light;
+        .no-touch &:hover {
+            color: $light;
+            background-color: #fff;
+        }
+    }
+    .touch & {
+        padding-top: 2px;
+    }
+    @media all and (min-width: 1200px) {
+        height: 43px;
+        font-size: 18px;
+        padding: 1px 30px 0;
+    }
+}
+.burgundy-btn {
+    @extend %btn;
+    height: 37px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 1px 27px 0;
+    border: 2px solid $burgundy;
+    background: $burgundy;
+    .no-touch &:hover {
+        color: $burgundy;
+        background-color: #fff;
+    }
+    .touch & {
+        padding-top: 2px;
+    }
+    svg {
+        margin-right: 10px;
+    }
+    @media all and (min-width: 1200px) {
+        height: 43px;
+        font-size: 18px;
+        padding: 1px 30px 0;
+    }
+}
+.up-btn {
+    position: fixed;
+    @extend %flex-cc;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    right: 24px;
+    bottom: 24px;
+    background: $burgundy;
+    cursor: pointer;
+    z-index: 160;
+    @extend %tr;
+    @extend %hidden;
+    &.active {
+        @extend %visible;
+    }
+    .no-touch &:hover {
+        background-color: $brown;
+    }
+    svg {
+        width: 37px;
+        height: 30px;
+        transform: rotate(-90deg);
+        transform-origin: 50% 50%;
+    }
+    @media all and (max-width: 1024px) {
+        display: none;
+    }
+    @media all and (min-width: 1600px) {
+        right: 65px;
+        bottom: 65px;
+    }
+}

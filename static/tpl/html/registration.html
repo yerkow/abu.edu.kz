@@ -1,0 +1,42 @@
+<!--#include file="includes/_header.html" -->
+<div class="wrapper">
+    <!--#include file="includes/_navigation.html" -->
+    <div class="wrapper__content wrapper__content_page">
+        <ul class="breadcrumbs">
+            <li>
+                <a href="">Главная</a>
+                <span>/</span>
+            </li>
+            <li>
+                <a href="">Промежуточная страница</a>
+                <span>/</span>
+            </li>
+            <li>Текущая страница</li>
+        </ul>
+        <h1 class="title-1">Регистрация</h1>
+        <form class="form">
+            <label class="form-label">
+                <span class="form-label__name">Введите Ваше Имя <sup>*</sup></span>
+                <input class="form-label__field" type="text" name="" placeholder="Иванов Иван Иванович" required>
+                <span class="form-label__error">ФИО должно содержать более 10 символов *</span>
+            </label>
+            <label class="form-label">
+                <span class="form-label__name">Введите ваш телефон <sup>*</sup></span>
+                <input class="form-label__field" type="tel" name="" placeholder="+7 ХХХ - ХХХ - ХХ - ХХ" required>
+            </label>
+            <label class="form-label">
+                <span class="form-label__name">ИНН <sup>*</sup></span>
+                <input class="form-label__field" type="text" name="" placeholder="Иванов Иван Иванович" required>
+            </label>
+            <label class="form-label">
+                <span class="form-label__name">Введите Вашу почту <sup>*</sup></span>
+                <input class="form-label__field" type="email" name="" placeholder="E-mail" required>
+            </label>
+            <div class="form__policy">Продолжая регистрацию, Вы соглашаетесь с условиями <a class="line-link" href="">политики конфиденциальности</a></div>
+            <div class="form__btns">
+                <button class="fill-btn fill-btn_brown" type="submit">зарегистрироваться</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!--#include virtual="includes/_footer.html"-->

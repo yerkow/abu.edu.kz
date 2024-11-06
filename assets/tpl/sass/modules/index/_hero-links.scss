@@ -1,0 +1,76 @@
+.hero-links {
+    position: relative;
+    @extend %flex-cst;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background: $light url('/tpl/images/hero-program-bg.png') center / cover no-repeat;
+    z-index: 100;
+    &:before {
+        @extend %psevdo;
+        background: rgba(153, 134, 117, 0.75);
+        z-index: -1;
+    }
+    &-item {
+        display: block;
+        width: 334px;
+        color: #fff;
+        text-align: center;
+        border: 3px solid #FFFFFF;
+        padding: 45px 15px;
+        font-size: 18px;
+        line-height: 22px;
+        + .hero-links-item {
+            margin-left: 20px;
+        }
+        .no-touch &:hover {
+            span {
+                border-bottom-color: transparent;
+            }
+        }
+        svg {
+            display: block;
+            margin: 0 auto 20px;
+        }
+        span {
+            border-bottom: 1px solid currentColor;
+            @extend %tr;
+        }
+    }
+}
+@media all and (max-width: 767px) {
+    .hero-links {
+        display: none;
+    }
+}
+@media all and (min-width: 1025px) {
+    .hero-links {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        &-item {
+            + .hero-links-item {
+                margin-left: 60px;
+            }
+        }
+    }
+}
+@media all and (min-width: 1600px) {
+    .hero-links {
+        &-item {
+            width: 465px;
+            font-size: 24px;
+            line-height: 29px;
+            padding: 80px 15px;
+            + .hero-links-item {
+                margin-left: 120px;
+            }
+            .link-1 {
+                width: 88px;
+                height: 88px;
+            }
+            .link-2 {
+                width: 120px;
+                height: 88px;
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.faculty {
+    +  .faculty{
+        margin-top: 70px;
+    }
+    &__name {
+        position: relative;
+        padding-left: 25px;
+        border-left: 5px solid $burgundy;
+    }
+}
+.faculties {
+    margin-top: 50px;
+}
+@media all and (min-width: 768px) {
+    .faculty {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        +  .faculty{
+            padding-top: 40px;
+            margin-top: 40px;
+            border-top: 1px solid $light;
+        }
+        &__name {
+            width: 280px;
+            min-width: 280px;
+            margin-bottom: 0;
+        }
+    }
+    .faculties {
+        margin-top: 70px;
+    }
+}
+@media all and (min-width: 1025px) {
+    .faculty {
+        +  .faculty{
+            padding-top: 60px;
+            margin-top: 60px;
+        }
+        &__name {
+            margin-bottom: 0;
+        }
+    }
+    .faculties {
+        margin-top: 90px;
+    }
+}
+@media all and (min-width: 1600px) {
+    .faculty {
+        &__name {
+            width: 355px;
+            min-width: 355px;
+        }
+    }
+}

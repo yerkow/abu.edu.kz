@@ -1,0 +1,36 @@
+.photos {
+    margin-bottom: 70px;
+    .swiper-slide {
+        width: 300px;
+    }
+    .swiper-slide-active {
+        .photos-item {
+            &:before {
+                opacity: 0;
+            }
+        }
+    }
+    &-item {
+        position: relative;
+        display: block;
+        z-index: 100;
+        &:before {
+            @extend %psevdo;
+            background: rgba(61, 61, 61, 0.5);
+            @extend %tr;
+        }
+        img {
+            @extend %img;
+            margin: 0;
+        }
+    }
+    &__pagination {
+        @extend %pagination;
+        margin-top: 40px;
+    }
+}
+@media all and (min-width: 768px) {
+    .photos {
+        margin-bottom: 90px;
+    }
+}
